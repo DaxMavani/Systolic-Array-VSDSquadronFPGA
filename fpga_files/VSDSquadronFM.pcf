@@ -1,0 +1,5 @@
+set_io uart_tx    3
+set_io uart_rx    4
+set_io led_red   41
+set_io led_green 39
+set_io led_blue  40
