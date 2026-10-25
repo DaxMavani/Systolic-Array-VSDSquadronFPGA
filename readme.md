@@ -60,23 +60,10 @@ AI inference is dominated by matrix multiplication. A CPU spends much of its eff
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    PC["PC<br/>host_test.py"] <-->|"UART 115200 8N1"| UART["uart_rx / uart_tx"]
-    UART --> TOP["fpga_top<br/>32 B in / 65 B out sequencer"]
-    TOP -->|"A, W, start"| SA
-
-    subgraph SA["systolic_array_top"]
-        CTRL["controller<br/>FSM"] --> WL["weight_loader"]
-        CTRL --> SK["activation_skew"]
-        CTRL --> OC["output_collector"]
-        WL -->|"weights, bottom row first"| PE["pe_array<br/>4×4 PEs"]
-        SK -->|"row r delayed by r cycles"| PE
-        PE -->|"bottom-row psums"| OC
-    end
-
-    OC -->|"C (16 × INT32)"| TOP
-```
+<p align="center">
+  <img src="all_media/architecture.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <br><em>Fig. 1: System architecture</em>
+</p>
 
 ### Dataflow
 
