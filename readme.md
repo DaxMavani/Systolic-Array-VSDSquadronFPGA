@@ -128,7 +128,10 @@ The multiply uses the currently registered activation, so a value takes one cycl
 | 4 | Drain / handshake | last partial sums reach the collector, `collector_done`, then `done` |
 | **18** | **Total** | matches the hardware cycle counter in `fpga_top.sv` |
 
-The reference run is in [`docs/waves_top.vcd`](docs/waves_top.vcd); open it with GTKWave.
+<p align="center">
+  <img src="all_media/Screenshot 2026-10-11 190316.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <br><em>Fig. 3: Cycle Count</em>
+</p>
 
 ## Results
 
