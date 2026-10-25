@@ -145,6 +145,15 @@ The multiply uses the currently registered activation, so a value takes one cycl
 
 Directed hardware tests: signed mix, identity, all −128 × −128, all 127 × −128, and zero activations.
 
+<p align="center">
+  <img src="all_media/test_1.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <br><em>Fig. 4: Test Output 1</em>
+</p>
+
+<p align="center">
+  <img src="all_media/tests_2.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <br><em>Fig. 5: Test Output 2</em>
+</p>
 ### Performance
 
 | Metric | Value |
