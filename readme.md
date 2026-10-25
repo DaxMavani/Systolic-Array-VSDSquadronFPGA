@@ -4,7 +4,7 @@
 
 **A weight-stationary matrix multiplier on a low-cost FPGA, built with a fully open-source toolchain and verified on real hardware.**
 
-[![(https://github.com/<your-username>/systolic-array-ice40/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-username>/systolic-array-ice40/actions/workflows/ci.yml)
+![CI][(https://github.com/<your-username>/systolic-array-ice40/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-username>/systolic-array-ice40/actions/workflows/ci.yml)
 ![FPGA](https://img.shields.io/badge/FPGA-iCE40UP5K-blue)
 ![Board](https://img.shields.io/badge/board-VSDSquadron%20FM-orange)
 ![Toolchain](https://img.shields.io/badge/toolchain-Yosys%20%7C%20nextpnr%20%7C%20IceStorm-green)
