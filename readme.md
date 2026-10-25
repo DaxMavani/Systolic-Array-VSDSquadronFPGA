@@ -304,15 +304,7 @@ print("cycles:", resp[64])
 
 ## Verification strategy
 
-| Level | Testbench / tool | What it covers |
-|---|---|---|
-| Unit | `tb/tb_processing_element.sv` | Weight load, MAC timing, accumulation, signed multiplication |
-| Array | `tb/tb_pe_array.sv` | Preload order and skewed streaming, 3 directed + 50 random matrices |
-| System | `tb/tb_systolic_array_top.sv` | Identity, ±128/127 extremes, zeros, 100 random matrices back-to-back with no reset |
-| Model | `model/systolic_golden_model.py` | Cycle-accurate model; each value carries a row tag and an assertion fires if skew and partial sums ever misalign. Also checks the hazards "matmul before preload" and "preload during compute" |
-| Hardware | `host/host_test.py` | Every FPGA result compared with an INT64 NumPy matmul |
-
-Testbenches are self-checking and exit non-zero on failure, so they run unchanged in CI.
+Not yet worked upon, but a major goal for the extension of major project.
 
 ## Design notes and limitations
 
