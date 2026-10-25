@@ -65,8 +65,15 @@ AI inference is dominated by matrix multiplication. A CPU spends much of its eff
   <br><em>Fig. 1: System architecture</em>
 </p>
 
-### Dataflow
+## Processing Element
 
+<p align="center">
+  <img src="all_media/architecture.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <br><em>Fig. 2: Processing Element</em>
+</p>
+
+### Dataflow
+ 
 ```
           W col0   W col1   W col2   W col3        preload: shifts DOWN, bottom row first
              |        |        |        |
@@ -80,6 +87,7 @@ A row3 ->  PE30 -> PE31 -> PE32 -> PE33 ->
              v        v        v        v
           C[.][0]  C[.][1]  C[.][2]  C[.][3]       partial sums move DOWN
 ```
+
 
 ### Modules
 
