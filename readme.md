@@ -68,7 +68,7 @@ AI inference is dominated by matrix multiplication. A CPU spends much of its eff
 ## Processing Element
 
 <p align="center">
-  <img src="all_media/pe.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <img src="all_media/pe.png" alt="System architecture of the 4x4 systolic array Processing Element" width="85%">
   <br><em>Fig. 2: Processing Element</em>
 </p>
 
@@ -129,7 +129,7 @@ The multiply uses the currently registered activation, so a value takes one cycl
 | **18** | **Total** | matches the hardware cycle counter in `fpga_top.sv` |
 
 <p align="center">
-  <img src="all_media/Screenshot 2026-10-11 190316.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <img src="all_media/Screenshot 2026-10-11 190316.png" alt="Cycle count" width="85%">
   <br><em>Fig. 3: Cycle Count</em>
 </p>
 
@@ -146,14 +146,15 @@ The multiply uses the currently registered activation, so a value takes one cycl
 Directed hardware tests: signed mix, identity, all −128 × −128, all 127 × −128, and zero activations.
 
 <p align="center">
-  <img src="all_media/test_1.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <img src="all_media/test_1.png" alt="Test 1" width="85%">
   <br><em>Fig. 4: Test Output 1</em>
 </p>
 
 <p align="center">
-  <img src="all_media/tests_2.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <img src="all_media/tests_2.png" alt="Test 2" width="85%">
   <br><em>Fig. 5: Test Output 2</em>
 </p>
+
 ### Performance
 
 | Metric | Value |
@@ -167,16 +168,15 @@ Directed hardware tests: signed mix, identity, all −128 × −128, all 127 × 
 
 The array itself finishes in microseconds, so the **UART link dominates end-to-end time**. Utilization is also low because each 4×4 multiply fills and drains the pipeline; continuous streaming (see [Future scope](#future-scope)) would amortize that.
 
+
+
 ### FPGA resources and timing
 
-Fill these in from your own `make stat` and `make time` output.
+<p align="center">
+  <img src="all_media/device usage.png" alt="Device Usage" width="85%">
+  <br><em>Fig. 6: Test Device Usage</em>
+</p>
 
-| Resource | Used | Available (iCE40UP5K) |
-|---|---|---|
-| LUTs | _TBD_ | 5280 |
-| Flip-flops | _TBD_ | 5280 |
-| DSP blocks | _TBD_ | 8 |
-| Fmax (icetime) | _TBD_ MHz | target 12 MHz |
 
 ## Repository layout
 
@@ -204,7 +204,7 @@ Fill these in from your own `make stat` and `make time` output.
 | [Verilator](https://www.veripool.org/verilator/) 5.x | Simulation and lint |
 | Python 3.9+ | `pip install -r requirements.txt` (NumPy, pySerial) |
 | VSDSquadron FM board | Running on hardware |
-| [GTKWave](https://gtkwave.sourceforge.net/) (optional) | Viewing waveforms |
+| [GTKWave](https://gtkwave.sourceforge.net/) | Viewing waveforms |
 
 ### 1. Simulate (no hardware needed)
 
