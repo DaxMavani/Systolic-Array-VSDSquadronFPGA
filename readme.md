@@ -68,7 +68,7 @@ AI inference is dominated by matrix multiplication. A CPU spends much of its eff
 ## Processing Element
 
 <p align="center">
-  <img src="all_media/architecture.png" alt="System architecture of the 4x4 systolic array" width="85%">
+  <img src="all_media/pe.png" alt="System architecture of the 4x4 systolic array" width="85%">
   <br><em>Fig. 2: Processing Element</em>
 </p>
 
